@@ -1,7 +1,12 @@
 package com.example.mood_diary_android
 
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.ViewPager
 import com.example.mood_diary_android.databinding.ActivityDiaryScreenBinding
 
@@ -12,11 +17,20 @@ class DiaryScreen : AppCompatActivity() {
         diaryScreenBinding = ActivityDiaryScreenBinding.inflate(layoutInflater)
         setContentView(diaryScreenBinding.root)
 
-        /*val selectedDate:String = intent.getStringExtra("Selected Date:",).toString()
-        diaryScreenBinding.text.text = selectedDate*/
+        diaryScreenBinding.saveBtn.setOnClickListener {
+            Toast.makeText(this,"Saved Successfully!!!",Toast.LENGTH_SHORT).show()
+        }
 
-        /*val myadapter = Myadapter(this)
-        val viewPager = findViewById<ViewPager>(R.id.viewpager)
-        viewPager.adapter = myadapter*/
+    }
+
+    var selectedCard: View? = null
+    fun moodSelected(view: View) {
+        if (selectedCard != null) {
+            selectedCard!!.setBackgroundColor(android.graphics.Color.parseColor("#FBA8C5")) // Set default color
+        }
+
+        view.setBackgroundColor(android.graphics.Color.parseColor("#7DC0F6")) // Set selected color
+
+        selectedCard = view
     }
 }

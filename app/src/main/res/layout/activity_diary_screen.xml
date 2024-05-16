@@ -44,6 +44,7 @@
                                     android:layout_height="100dp"
                                     android:text="😄"
                                     android:layout_marginTop="0dp"
+                                    android:onClick="moodSelected"
                                     android:textSize="60sp"
                                     android:gravity="center_horizontal">
                                 </TextView>
@@ -51,10 +52,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
                                     android:layout_marginTop="70dp"
-                                    android:text="Cheerful"
-                                    android:textSize="16sp"
+                                    android:text="cheerful"
                                     android:textColor="#041365"
                                     android:fontFamily="@font/emilys_candy"
+                                    android:textSize="16sp"
                                     android:gravity="center">
 
                                 </TextView>
@@ -74,6 +75,7 @@
                                     android:layout_height="100dp"
                                     android:text="😌"
                                     android:layout_marginTop="0dp"
+                                    android:onClick="moodSelected"
                                     android:textSize="60sp"
                                     android:gravity="center_horizontal">
                                 </TextView>
@@ -81,7 +83,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
                                     android:layout_marginTop="70dp"
-                                    android:text="Relaxed"
+                                    android:text="relaxed"
                                     android:textColor="#041365"
                                     android:fontFamily="@font/emilys_candy"
                                     android:textSize="16sp"
@@ -104,6 +106,7 @@
                                     android:layout_height="100dp"
                                     android:text="😐"
                                     android:layout_marginTop="0dp"
+                                    android:onClick="moodSelected"
                                     android:textSize="60sp"
                                     android:gravity="center_horizontal">
                                 </TextView>
@@ -111,10 +114,10 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
                                     android:layout_marginTop="70dp"
-                                    android:text="Neutral"
-                                    android:textSize="16sp"
-                                    android:fontFamily="@font/emilys_candy"
+                                    android:text="neutral"
                                     android:textColor="#041365"
+                                    android:fontFamily="@font/emilys_candy"
+                                    android:textSize="16sp"
                                     android:gravity="center">
 
                                 </TextView>
@@ -132,8 +135,9 @@
                                     android:background="@drawable/background"
                                     android:layout_width="match_parent"
                                     android:layout_height="100dp"
-                                    android:text="😔"
+                                    android:text="😞"
                                     android:layout_marginTop="0dp"
+                                    android:onClick="moodSelected"
                                     android:textSize="60sp"
                                     android:gravity="center_horizontal">
                                 </TextView>
@@ -141,7 +145,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="20dp"
                                     android:layout_marginTop="70dp"
-                                    android:text="Sad"
+                                    android:text="sad"
                                     android:textColor="#041365"
                                     android:fontFamily="@font/emilys_candy"
                                     android:textSize="16sp"
@@ -169,15 +173,35 @@
 
         </TextView>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_below="@id/describe"
-            android:background="@drawable/background"
-            android:layout_margin="20dp">
 
-        </EditText>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:orientation="vertical"
+                    android:layout_below="@id/describe">
+                        <EditText
+                            android:id="@+id/description"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@drawable/background"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:padding="5dp">
 
+                        </EditText>
+                        <Button
+                            android:id="@+id/save_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="#041365"
+                            android:textColor="#FBA8C5"
+                            android:text="SAVE"
+                            android:layout_marginTop="10dp">
+
+                        </Button>
+
+                </LinearLayout>
 
 
 </RelativeLayout>
